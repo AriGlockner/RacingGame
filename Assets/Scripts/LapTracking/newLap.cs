@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class newLap : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "Player")
+        {
+            LapTracker.updateLap();
+            return;
+
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

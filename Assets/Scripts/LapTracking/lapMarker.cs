@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class lapMarker : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int positionInLap;
+
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "Player")
+        {
+            setPosition(positionInLap);
+            return;
+
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public static void setPosition(int pos)
     {
-        
+        LapTracker.updatePosition(pos);
     }
 }
