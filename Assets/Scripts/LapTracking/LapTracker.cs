@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class LapTracker : MonoBehaviour
 {
@@ -67,7 +67,7 @@ public class LapTracker : MonoBehaviour
             if (lap > maxLap)
             {
                 Debug.Log("You Finished the Race!");
-                //SceneManager.LoadScene(WinScreen);
+                SceneManager.LoadScene("WinScreen");
             }
 
             position = 0;
