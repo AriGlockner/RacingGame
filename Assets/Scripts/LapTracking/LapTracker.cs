@@ -26,10 +26,13 @@ public class LapTracker : MonoBehaviour
     //Update Variables
     public static bool updateVariables = false;
 
+
     void Start()
     {
         maxLap = totalLaps;
         maxPosition = maxPositionInLap;
+
+        
     }
 
     void Update()
@@ -63,6 +66,7 @@ public class LapTracker : MonoBehaviour
         if (position == maxPosition)
         {
             lap++;
+            displayLap.updateLap();
 
             if (lap > maxLap)
             {
@@ -74,4 +78,5 @@ public class LapTracker : MonoBehaviour
             updateVariables = true;
         }
     }
+
 }
