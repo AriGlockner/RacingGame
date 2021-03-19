@@ -9,4 +9,11 @@ public class SwitchScene : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    void startLevel(string sceneName, int num)
+    {
+        modeSelection.gameModeNumber = num;
+
+        SceneManager.LoadScene(sceneName);
+    }
 }
