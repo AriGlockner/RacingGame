@@ -309,6 +309,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lapPositionTracker (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
+      objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -473,6 +478,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lapPositionTracker (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
+      objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -563,6 +573,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lapPositionTracker (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -1057,6 +1072,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lapPositionTracker (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
+      objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1080,7 +1100,7 @@ PrefabInstance:
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -1090,7 +1110,7 @@ PrefabInstance:
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -1105,7 +1125,7 @@ PrefabInstance:
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -1132,7 +1152,7 @@ GameObject:
   - component: {fileID: 274220156}
   m_Layer: 0
   m_Name: Terrain_(1000.0, 0.0, 0.0)
-  m_TagString: Untagged
+  m_TagString: terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1293,7 +1313,7 @@ GameObject:
   - component: {fileID: 294055023}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1367,6 +1387,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lapPositionTracker (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -1622,7 +1647,7 @@ GameObject:
   - component: {fileID: 396598108}
   m_Layer: 0
   m_Name: Terrain_(2000.0, 0.0, 1000.0)
-  m_TagString: Untagged
+  m_TagString: terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1926,6 +1951,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 216301967}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &488074987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 488074988}
+  m_Layer: 0
+  m_Name: ----- UI Layer -----
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &488074988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488074987}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &497737676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2426,6 +2481,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lapPositionTracker (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
+      objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2648,6 +2708,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lapPositionTracker (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
+      objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2666,17 +2731,17 @@ PrefabInstance:
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -2696,7 +2761,7 @@ PrefabInstance:
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -2739,6 +2804,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lapPositionTracker (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -3011,6 +3081,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lapPositionTracker (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -3401,6 +3476,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lapPositionTracker (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
+      objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3479,6 +3559,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lapPositionTracker (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -3786,6 +3871,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6ec41f7c0e0d3fb40933551a4124b211, type: 2}
+    - target: {fileID: 6500004, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_SteerHelper
       value: 0.25
@@ -3889,7 +3978,7 @@ GameObject:
   - component: {fileID: 963549791}
   m_Layer: 0
   m_Name: Terrain_(-1000.0, 0.0, 0.0)
-  m_TagString: Untagged
+  m_TagString: terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4045,7 +4134,7 @@ GameObject:
   - component: {fileID: 992732883}
   m_Layer: 0
   m_Name: Terrain_(0.0, 0.0, -1000.0)
-  m_TagString: Untagged
+  m_TagString: terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4182,7 +4271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1028415565
 Transform:
   m_ObjectHideFlags: 0
@@ -4279,6 +4368,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lapPositionTracker (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -4472,7 +4566,7 @@ RectTransform:
   - {fileID: 1028415565}
   - {fileID: 1046956862}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4650,6 +4744,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lapPositionTracker (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -5368,7 +5467,7 @@ GameObject:
   - component: {fileID: 1287891841}
   m_Layer: 0
   m_Name: Terrain_(2000.0, 0.0, -1000.0)
-  m_TagString: Untagged
+  m_TagString: terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5561,7 +5660,7 @@ GameObject:
   - component: {fileID: 1312859745}
   m_Layer: 0
   m_Name: Terrain_(-1000.0, 0.0, -1000.0)
-  m_TagString: Untagged
+  m_TagString: terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5694,7 +5793,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1333577961 stripped
 Transform:
@@ -5713,6 +5812,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lapPositionTracker (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -5800,7 +5904,7 @@ GameObject:
   - component: {fileID: 1366148562}
   m_Layer: 0
   m_Name: Terrain_(0.0, 0.0, 1000.0)
-  m_TagString: Untagged
+  m_TagString: terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5956,7 +6060,7 @@ GameObject:
   - component: {fileID: 1393027697}
   m_Layer: 0
   m_Name: Terrain_(1000.0, 0.0, 1000.0)
-  m_TagString: Untagged
+  m_TagString: terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6037,6 +6141,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lapPositionTracker (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
+      objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6060,7 +6169,7 @@ PrefabInstance:
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -6085,7 +6194,7 @@ PrefabInstance:
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -6121,6 +6230,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lapPositionTracker (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -6661,6 +6775,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lapPositionTracker (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -7281,6 +7400,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lapPositionTracker (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
+      objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7515,6 +7639,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lapPositionTracker (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
+      objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7585,6 +7714,11 @@ PrefabInstance:
       propertyPath: positionInLap
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381823, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f9561c97c0384a7988ec9b2cdaab331, type: 3}
 --- !u!4 &1644358609 stripped
@@ -7605,6 +7739,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lapPositionTracker (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
+      objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7613,7 +7752,7 @@ PrefabInstance:
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 68
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -7834,7 +7973,7 @@ GameObject:
   - component: {fileID: 1679002523}
   m_Layer: 0
   m_Name: Terrain_(1000.0, 0.0, -1000.0)
-  m_TagString: Untagged
+  m_TagString: terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8163,6 +8302,47 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1599836833}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1763027816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100016, guid: 0e7ee4df08df88c4880f43398f9ad2c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 922752702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1763027821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763027816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f26f20e2acf645f9be7ab7736bef0f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeAllowedOffRoad: 5
+  timeSinceOnTrack: 0
+  offTrack: 0
+  positionOfMarker: {x: 0, y: 0, z: 0}
+  rotationOfMarker: 0
+  car: {fileID: 0}
+  rb: {fileID: 0}
+  isSleeping: 0
+  sleepDuration: 0
+  sleepTime: 5
+--- !u!65 &1763027822
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763027816}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 3, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1769327450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1579282987822796750, guid: 941fac9249b6442cdb2d3f23472128e2,
@@ -8697,6 +8877,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lapPositionTracker (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
+      objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8873,7 +9058,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1925997995
 MonoBehaviour:
@@ -9456,7 +9641,7 @@ GameObject:
   - component: {fileID: 2060632995}
   m_Layer: 0
   m_Name: Terrain_(-1000.0, 0.0, 1000.0)
-  m_TagString: Untagged
+  m_TagString: terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9536,6 +9721,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lapPositionTracker (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -9619,7 +9809,7 @@ PrefabInstance:
     - target: {fileID: 8135817075816636097, guid: 40edbcc1d6247412ea82349e34d5add5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 71.9
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 8135817075816636097, guid: 40edbcc1d6247412ea82349e34d5add5,
         type: 3}
@@ -10084,7 +10274,7 @@ GameObject:
   - component: {fileID: 2142267070}
   m_Layer: 0
   m_Name: Terrain_(2000.0, 0.0, 0.0)
-  m_TagString: Untagged
+  m_TagString: terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10158,6 +10348,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxPositionInLap
       value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074446378218914224, guid: e85f2c864ea5940358d2d0d12d352545,
+        type: 3}
+      propertyPath: totalLaps
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2074446378218914225, guid: e85f2c864ea5940358d2d0d12d352545,
         type: 3}
@@ -10302,6 +10497,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lapPositionTracker
       objectReference: {fileID: 0}
+    - target: {fileID: 8282487143946381817, guid: 5f9561c97c0384a7988ec9b2cdaab331,
+        type: 3}
+      propertyPath: m_TagString
+      value: positionMarker
+      objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10320,22 +10520,22 @@ PrefabInstance:
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
@@ -10350,7 +10550,7 @@ PrefabInstance:
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 8282487143946381820, guid: 5f9561c97c0384a7988ec9b2cdaab331,
         type: 3}

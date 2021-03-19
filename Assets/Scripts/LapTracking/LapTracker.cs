@@ -26,13 +26,10 @@ public class LapTracker : MonoBehaviour
     //Update Variables
     public static bool updateVariables = false;
 
-
     void Start()
     {
         maxLap = totalLaps;
-        maxPosition = maxPositionInLap;
-
-        
+        maxPosition = maxPositionInLap;     
     }
 
     void Update()
@@ -72,6 +69,7 @@ public class LapTracker : MonoBehaviour
             {
                 Debug.Log("You Finished the Race!");
                 SceneManager.LoadScene("WinScreen");
+                lap = 1;
             }
 
             position = 0;
