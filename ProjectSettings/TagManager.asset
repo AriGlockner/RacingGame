@@ -8,6 +8,11 @@ TagManager:
   - lap
   - terrain
   - positionMarker
+  - freeplay
+  - raceAgainstClock
+  - raceAgainstGhost
+  - raceAgainstComputer
+  - initialCountDown
   layers:
   - Default
   - TransparentFX
