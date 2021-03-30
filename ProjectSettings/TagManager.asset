@@ -13,6 +13,7 @@ TagManager:
   - raceAgainstGhost
   - raceAgainstComputer
   - initialCountDown
+  - ghost
   layers:
   - Default
   - TransparentFX
@@ -29,8 +30,8 @@ TagManager:
   - CrashObject
   - Kart
   - TrainingCheckpoints
-  - 
-  - 
+  - Ghost
+  - Player
   - 
   - 
   - 
