@@ -10,7 +10,12 @@ public class newLap : MonoBehaviour
         {
             LapTracker.updateLap();
             return;
+        }
 
+        if (other.tag == "ghost")
+        {
+            ghostLapTracker.updateLap();
+            return;
         }
     }
 

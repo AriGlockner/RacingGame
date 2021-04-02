@@ -14,6 +14,7 @@ TagManager:
   - raceAgainstComputer
   - initialCountDown
   - ghost
+  - lapTracking
   layers:
   - Default
   - TransparentFX
