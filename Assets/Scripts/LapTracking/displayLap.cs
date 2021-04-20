@@ -10,7 +10,7 @@ public class displayLap : MonoBehaviour
 
     void Start()
     {
-        currentLap.text = "Lap: " + LapTracker.lap.ToString();
+        currentLap.text = "Lap: " + LapTracker.lap.ToString() + " / 3";
     }
 
     void Update()
@@ -22,7 +22,7 @@ public class displayLap : MonoBehaviour
 
     void setText()
     {
-        currentLap.text = "Lap: " + LapTracker.lap.ToString();
+        currentLap.text = "Lap: " + LapTracker.lap.ToString() + " / 3";
         updateText = false;
     }
 

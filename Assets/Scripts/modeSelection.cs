@@ -165,6 +165,9 @@ public class modeSelection : MonoBehaviour
 
             if (gameModeSelected == "ghost computer")
                 ghostCPU_rb.WakeUp();
+
+            else if (gameModeSelected == "beat the clock")
+                timer.startCountDown = true;
         }
 
         else if (timeInSeconds < 0)
@@ -177,6 +180,9 @@ public class modeSelection : MonoBehaviour
 
             if (gameModeSelected == "ghost computer")
                 ghostCPU_rb.WakeUp();
+
+            else if (gameModeSelected == "beat the clock")
+                timer.startCountDown = true;
         }
     }
 }
