@@ -16,12 +16,15 @@ public class modeSelection : MonoBehaviour
     public int timeInSeconds;
     public Text textToDisplay;
     public bool adjustTimeObject;
+    public GameObject startTimeGameObject;
 
-    [Header("GameObjects")]
+    [Header("Player")]
     public GameObject car;
     public Rigidbody rb;
 
-    public GameObject startTimeGameObject;
+    [Header("CPU Car")]
+    public GameObject ghostCPU;
+    public Rigidbody ghostCPU_rb;
 
     void Awake()
     {
@@ -30,6 +33,8 @@ public class modeSelection : MonoBehaviour
         car = GameObject.FindGameObjectWithTag("Player");
         rb = car.GetComponent<Rigidbody>();
         rb.Sleep();
+
+        setMode();
         adjustTimeObject = true;
     }
 
@@ -82,7 +87,7 @@ public class modeSelection : MonoBehaviour
         Debug.Log("Race against a ghost mode selected!");
 
         setGameObjectsWithTagState(false, false, true, false);
-        
+
     }
 
     void startAIRaceMode()
@@ -135,16 +140,22 @@ public class modeSelection : MonoBehaviour
         timeTilStart -= Time.deltaTime;
         timeInSeconds = (int)timeTilStart;
 
-        if (timeInSeconds > 4)
+        if (timeInSeconds >= 4)
         {
             rb.Sleep();
             textToDisplay.text = "";
+
+            if (gameModeSelected == "ghost computer")
+                ghostCPU_rb.Sleep();
         }
 
-        else if (timeInSeconds > 0 && timeInSeconds < 4)
+        else if (timeInSeconds > 0)
         {
             textToDisplay.text = timeInSeconds.ToString();
             rb.Sleep();
+
+            if (gameModeSelected == "ghost computer")
+                ghostCPU_rb.Sleep();
         }
 
         else if (timeInSeconds == 0)
@@ -152,14 +163,20 @@ public class modeSelection : MonoBehaviour
             textToDisplay.text = "Go";
             rb.WakeUp();
 
-            setMode();
+            if (gameModeSelected == "ghost computer")
+                ghostCPU_rb.WakeUp();
         }
 
         else if (timeInSeconds < 0)
         {
             textToDisplay.text = "";
+
             rb.WakeUp();
+
             adjustTimeObject = false;
+
+            if (gameModeSelected == "ghost computer")
+                ghostCPU_rb.WakeUp();
         }
     }
 }
