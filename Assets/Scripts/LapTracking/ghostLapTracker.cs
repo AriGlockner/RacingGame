@@ -27,6 +27,7 @@ public class ghostLapTracker : MonoBehaviour
 
         cpuPositionInLap = 0;
         cpuCurrentLap = 1;
+        cpuLap = 1;
     }
 
     void Update()
@@ -64,5 +65,15 @@ public class ghostLapTracker : MonoBehaviour
             cpuPos = 0;
             updateVariables = true;
         }
+    }
+
+    public int getLap()
+    {
+        return cpuLap;
+    }
+
+    public int getPos()
+    {
+        return cpuPos;
     }
 }
