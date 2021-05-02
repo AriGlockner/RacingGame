@@ -22,9 +22,13 @@ public class modeSelection : MonoBehaviour
     public GameObject car;
     public Rigidbody rb;
 
-    [Header("CPU Car")]
+    [Header("Ghost CPU Car")]
     public GameObject ghostCPU;
     public Rigidbody ghostCPU_rb;
+
+    [Header("CPU Car")]
+    public GameObject cpu;
+    public Rigidbody cpu_rb;
 
     void Awake()
     {
@@ -51,50 +55,24 @@ public class modeSelection : MonoBehaviour
         switch (gameModeNumber)
         {
             case 0:
-                startFreeplayMode();
+                Debug.Log("Freeplay mode selected!");
+                setGameObjectsWithTagState(true, false, false, false);
                 return;
             case 1:
-                startBeatTheClockMode();
+                Debug.Log("Beat the clock mode selected!");
+                timer.startCountDown = true;
+                setGameObjectsWithTagState(false, true, false, false);
                 return;
-
             case 2:
-                startGhostComputerMode();
+                Debug.Log("Race against a ghost mode selected!");
+                setGameObjectsWithTagState(false, false, true, false);
                 return;
-
             case 3:
-                startAIRaceMode();
+                Debug.Log("Race against a live computer selected!");
+                setGameObjectsWithTagState(false, false, false, true);
                 return;
 
         }
-    }
-
-    void startFreeplayMode()
-    {
-        Debug.Log("Freeplay mode selected!");
-
-        setGameObjectsWithTagState(true, false, false, false);
-    }
-
-    void startBeatTheClockMode()
-    {
-        Debug.Log("Beat the clock mode selected!");
-        timer.startCountDown = true;
-        setGameObjectsWithTagState(false, true, false, false);
-    }
-
-    void startGhostComputerMode()
-    {
-        Debug.Log("Race against a ghost mode selected!");
-
-        setGameObjectsWithTagState(false, false, true, false);
-
-    }
-
-    void startAIRaceMode()
-    {
-        Debug.Log("Race against a live computer selected!");
-
-        setGameObjectsWithTagState(false, false, false, true);
     }
 
     void setGameObjectsWithTagState(bool isActive1, bool isActive2, bool isActive3, bool isActive4)
@@ -147,6 +125,9 @@ public class modeSelection : MonoBehaviour
 
             if (gameModeSelected == "ghost computer")
                 ghostCPU_rb.Sleep();
+
+            else if (gameModeSelected == "live race against computer")
+                cpu_rb.Sleep();
         }
 
         else if (timeInSeconds > 0)
@@ -156,6 +137,9 @@ public class modeSelection : MonoBehaviour
 
             if (gameModeSelected == "ghost computer")
                 ghostCPU_rb.Sleep();
+
+            else if (gameModeSelected == "live race against computer")
+                cpu_rb.Sleep();
         }
 
         else if (timeInSeconds == 0)
@@ -168,6 +152,9 @@ public class modeSelection : MonoBehaviour
 
             else if (gameModeSelected == "beat the clock")
                 timer.startCountDown = true;
+
+            else if (gameModeSelected == "live race against computer")
+                cpu_rb.WakeUp();
         }
 
         else if (timeInSeconds < 0)
@@ -183,6 +170,9 @@ public class modeSelection : MonoBehaviour
 
             else if (gameModeSelected == "beat the clock")
                 timer.startCountDown = true;
+
+            else if (gameModeSelected == "live race against computer")
+                cpu_rb.WakeUp();
         }
     }
 }

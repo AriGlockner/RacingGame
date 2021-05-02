@@ -27,12 +27,13 @@ public class calculatePlace : MonoBehaviour
     public GameObject newLapMarker;
 
     [Header("Other")]
+    public string mode;
     public int frames;
     public int maxFrames;
 
     void Start()
     {
-        CPU_Vehicles = GameObject.FindGameObjectsWithTag("ghost");
+        CPU_Vehicles = GameObject.FindGameObjectsWithTag(mode);
         player = GameObject.FindGameObjectWithTag("Player");
 
         lapTrackers = GameObject.FindGameObjectsWithTag("positionMarker");

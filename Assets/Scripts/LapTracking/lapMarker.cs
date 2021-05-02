@@ -9,16 +9,10 @@ public class lapMarker : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
-        {
             setPlayerPosition(positionInLap);
-            return;
 
-        }
-        if (other.tag == "ghost")
-        {
-            setComputerPosition(positionInLap);
-            return;
-        }
+        else if (other.tag == "ghost")
+            setGhostPosition(positionInLap);
     }
 
     public static void setPlayerPosition(int pos)
@@ -26,7 +20,7 @@ public class lapMarker : MonoBehaviour
         LapTracker.updatePosition(pos);
     }
 
-    public static void setComputerPosition(int pos)
+    public static void setGhostPosition(int pos)
     {
         ghostLapTracker.updatePosition(pos);
     }

@@ -15,6 +15,7 @@ TagManager:
   - initialCountDown
   - ghost
   - lapTracking
+  - cpu
   layers:
   - Default
   - TransparentFX
