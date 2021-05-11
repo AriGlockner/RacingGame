@@ -17,6 +17,7 @@ public class modeSelection : MonoBehaviour
     public Text textToDisplay;
     public bool adjustTimeObject;
     public GameObject startTimeGameObject;
+    public static bool canGo;
 
     [Header("Player")]
     public GameObject car;
@@ -40,6 +41,8 @@ public class modeSelection : MonoBehaviour
 
         setMode();
         adjustTimeObject = true;
+        
+        canGo = false;
     }
 
     void Update()
@@ -164,6 +167,7 @@ public class modeSelection : MonoBehaviour
             rb.WakeUp();
 
             adjustTimeObject = false;
+            canGo = true;
 
             if (gameModeSelected == "ghost computer")
                 ghostCPU_rb.WakeUp();

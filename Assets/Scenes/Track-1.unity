@@ -4093,7 +4093,7 @@ GameObject:
   - component: {fileID: 312899189}
   m_Layer: 0
   m_Name: SelectGameMode
-  m_TagString: Untagged
+  m_TagString: modeSelection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9275,6 +9275,25 @@ Rigidbody:
     type: 3}
   m_PrefabInstance: {fileID: 738679884}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &738679890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738679886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c6e3cf87be1c4c768d1d53907279b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cpu: {fileID: 0}
+  rb: {fileID: 0}
+  canGo: 0
+  speed: 0
+  speedToReset: 1
+  resetTime: 3
+  timeStill: 0
 --- !u!1 &749118258
 GameObject:
   m_ObjectHideFlags: 0
@@ -28708,6 +28727,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NewLapMarker
+      objectReference: {fileID: 0}
+    - target: {fileID: 2158139958113744517, guid: ad92821bb9642430f9f7fdfb6ee4e6d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: newLap
       objectReference: {fileID: 0}
     - target: {fileID: 2158139958113744518, guid: ad92821bb9642430f9f7fdfb6ee4e6d3,
         type: 3}

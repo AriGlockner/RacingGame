@@ -16,6 +16,8 @@ TagManager:
   - ghost
   - lapTracking
   - cpu
+  - modeSelection
+  - newLap
   layers:
   - Default
   - TransparentFX
