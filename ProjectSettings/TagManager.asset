@@ -18,6 +18,7 @@ TagManager:
   - cpu
   - modeSelection
   - newLap
+  - cpuWaypointCheckpoints
   layers:
   - Default
   - TransparentFX

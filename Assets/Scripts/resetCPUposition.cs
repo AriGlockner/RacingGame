@@ -16,16 +16,27 @@ public class resetCPUposition : MonoBehaviour
     [Space]
     public float resetTime;
     public float timeStill;
+
+    [Header("Waypoints:")]
+    public GameObject[] waypoints;
+    public GameObject newLapWaypoint;
+
+    //
     
+    //
+
     void Start()
     {
         cpu = this.gameObject;
         rb = cpu.GetComponent<Rigidbody>();
         
         canGo = false;
+        waypoints = GameObject.FindGameObjectsWithTag("cpuWaypointCheckpoints");
+        newLapWaypoint = GameObject.FindGameObjectWithTag("newLap");
+
+        setWaypointNumbers();
     }
 
-    // Update is called once per frame
     void Update()
     {
         speed = rb.velocity.magnitude;
@@ -49,30 +60,34 @@ public class resetCPUposition : MonoBehaviour
     
     void resetPosition()
     {
-    	//Realize it's offroad
     	timeStill = 0f;
     	Debug.Log("Reset CPU Position");
-    	
-    	//Reset off road position
-    	GameObject marker = getLapMarker(ghostLapTracker.cpuPos);    	
-    	
-    	rb.velocity = new Vector3(0f, 0f, 0f);
-    	transform.position = marker.transform.position;
-    	cpu.transform.rotation = marker.transform.rotation;
-    	
-    }
-    
-    GameObject getLapMarker(int pos)
-    {
-        GameObject[] checkpoints;
-        checkpoints = GameObject.FindGameObjectsWithTag("positionMarker");
 
-        foreach (GameObject obj in checkpoints)
+        //Get location to go to
+        GameObject goTo = getWaypoint();
+
+        //Reset the vehicle
+    	rb.velocity = new Vector3(0f, 0f, 0f);
+    	transform.position = goTo.transform.position;
+    	cpu.transform.rotation = goTo.transform.rotation;
+    }
+
+    GameObject getWaypoint()
+    {
+        //Find the previous checkpoint
+
+        //Defualt set to the start of the track
+        return newLapWaypoint;
+    }
+
+    void setWaypointNumbers()
+    {
+        int i = 0;
+
+        foreach (GameObject obj in waypoints)
         {
-            if (obj.GetComponent<lapMarker>().positionInLap == pos)
-                return obj;
+            obj.GetComponent<waypointInfo>().waypointNumber = i;
+            i++;
         }
-        
-        return GameObject.FindGameObjectWithTag("newLap");
     }
 }

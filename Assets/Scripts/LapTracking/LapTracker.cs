@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class LapTracker : MonoBehaviour
 {
+    //scenes
+    public static string sceneName;
+    public string winSceneName;
+
     //Non-Static Variables
     [Header("Laps:")]
     public int currentLap;
@@ -29,7 +33,9 @@ public class LapTracker : MonoBehaviour
     void Start()
     {
         maxLap = totalLaps;
-        maxPosition = maxPositionInLap;     
+        maxPosition = maxPositionInLap;
+
+        sceneName = winSceneName;
     }
 
     void Update()
@@ -68,7 +74,7 @@ public class LapTracker : MonoBehaviour
             if (lap > maxLap)
             {
                 Debug.Log("You Finished the Race!");
-                SceneManager.LoadScene("WinScreen");
+                SceneManager.LoadScene(sceneName);
                 lap = 1;
             }
 

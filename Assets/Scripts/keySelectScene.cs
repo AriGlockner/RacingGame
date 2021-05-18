@@ -14,6 +14,7 @@ public class keySelectScene : MonoBehaviour
         if (Input.GetKey(KeyCode.Alpha2))
             startLevel("Track-1", 0);
 
+        /*
         if (Input.GetKey(KeyCode.Alpha3))
             startLevel("Track-1", 1);
 
@@ -22,7 +23,7 @@ public class keySelectScene : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Alpha5))
             startLevel("Track-1", 3);
-        
+        */
     }
 
     void switchScene(string sceneName)

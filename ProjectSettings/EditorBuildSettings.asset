@@ -14,13 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Track-1.unity
     guid: 982caf6856699494ba4727057baca1dc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/WinScreen.unity
     guid: 37a95f663c21743f8b55b8f55ad10e64
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LoseScreen.unity
     guid: 936a06fe10fa9446b919273855485433
   - enabled: 1
-    path: Assets/Scenes/testWinScene.unity
-    guid: 2ea5008b941534846aa2b3321c1cc50b
+    path: Assets/Scenes/TempWinScreen.unity
+    guid: 092643c61beaf4324889951a88247d55
   m_configObjects: {}
