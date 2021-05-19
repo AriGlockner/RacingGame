@@ -8,7 +8,6 @@ public class calculatePlace : MonoBehaviour
     
     [Header("Text")]
     public Text place;
-    public int vehiclesAhead;
 
     [Header("Player")]
     public GameObject player;
@@ -17,10 +16,10 @@ public class calculatePlace : MonoBehaviour
     public float playerDistanceToCheckpoint;
 
     [Header("CPU")]
-    public GameObject[] CPU_Vehicles;
+    public GameObject CPU_Vehicle;
     public int cpuLap;
     public int cpuPos;
-    public float cpuDistance;
+    public float cpuDistanceToCheckpoint;
 
     [Header("Lap Trackers")]
     public GameObject[] lapTrackers;
@@ -28,12 +27,12 @@ public class calculatePlace : MonoBehaviour
 
     [Header("Other")]
     public string mode;
-    public int frames;
+    private int frames;
     public int maxFrames;
 
     void Start()
     {
-        CPU_Vehicles = GameObject.FindGameObjectsWithTag(mode);
+        CPU_Vehicle = GameObject.FindGameObjectWithTag(mode);
         player = GameObject.FindGameObjectWithTag("Player");
 
         lapTrackers = GameObject.FindGameObjectsWithTag("positionMarker");
@@ -46,52 +45,64 @@ public class calculatePlace : MonoBehaviour
 
         if (frames >= maxFrames)
         {
-            setText(getPosition());
+            setPosition();
             frames = 0;
         }
     }
 
-    int getPosition()
+    int setPosition()
     {
-        vehiclesAhead = 0;
-
         //Player position lap and position values
         playerLap = LapTracker.lap;
         playerPosition = LapTracker.position;
+
+        //CPU position lap and position values
+        cpuLap = CPU_Vehicle.GetComponent<ghostLapTracker>().getLap();
+        cpuPos = CPU_Vehicle.GetComponent<ghostLapTracker>().getPos();
 
         //Next player Checkpoint distance
         GameObject lapMarker;
         lapMarker = getMarkerPosition(playerPosition);
         playerDistanceToCheckpoint = getDistanceApart(player.transform.position, lapMarker.transform.position);
 
-        //Checks to see how many cpu vehicles are ahead of the player
-        foreach (GameObject comp in CPU_Vehicles)
+
+        //Next CPU Checkpoint distance
+        lapMarker = getMarkerPosition(cpuPos);
+        cpuDistanceToCheckpoint = getDistanceApart(CPU_Vehicle.transform.position, lapMarker.transform.position);
+
+        //Compares Lap
+        if (playerLap > cpuLap)
         {
-            //Checks Lap
-            cpuLap = comp.GetComponent<ghostLapTracker>().getLap();
-
-            if (cpuLap > playerLap)
-                vehiclesAhead++;
-
-            else if (cpuLap == playerLap)
-            {
-                //Checks position
-                cpuPos = comp.GetComponent<ghostLapTracker>().getPos();
-
-                if (cpuPos > playerPosition)
-                    vehiclesAhead++;
-
-                else if (cpuPos == playerPosition)
-                {
-                    //Checks distance to next checkpoint
-                    cpuDistance = getDistanceApart(comp.transform.position, getMarkerPosition(cpuPos).transform.position);
-
-                    if (cpuDistance < playerDistanceToCheckpoint)
-                        vehiclesAhead++;
-                }
-            }
+            place.text = "1st";
+            return 1;
         }
-        return vehiclesAhead + 1;
+        if (playerLap < cpuLap)
+        {
+            place.text = "2nd";
+            return 2;
+        }
+
+        //Compares Position
+        if (playerPosition > cpuPos)
+        {
+            place.text = "1st";
+            return 1;
+        }
+        if (playerPosition < cpuPos)
+        {
+            place.text = "2nd";
+            return 2;
+        }
+
+        //Compares Position
+        if (playerDistanceToCheckpoint < cpuDistanceToCheckpoint)
+        {
+            place.text = "1st";
+            return 1;
+        }
+        
+        place.text = "2nd";
+        return 2;
     }
 
     GameObject getMarkerPosition(int markerNumber)
@@ -102,7 +113,6 @@ public class calculatePlace : MonoBehaviour
             if (m.GetComponent<lapMarker>().positionInLap == markerNumber + 1)
                 return m;
         }
-
         return newLapMarker;
     }
 
@@ -114,31 +124,4 @@ public class calculatePlace : MonoBehaviour
 
         return Mathf.Sqrt(x + y + z);
     }
-
-    void setText(int position)
-    {
-        switch (position)
-        {
-            case 1:
-                place.text = "1st";
-                return;
-            case 2:
-                place.text = "2nd";
-                return;
-            case 3:
-                place.text = "3rd";
-                return;
-            case 4:
-                place.text = "4th";
-                return;
-            case 5:
-                place.text = "5th";
-                return;
-            case 6:
-                place.text = "6th";
-                return;
-        }
-        place.text = null;
-    }
-    
 }

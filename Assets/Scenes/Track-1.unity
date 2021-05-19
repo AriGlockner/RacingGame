@@ -7761,11 +7761,10 @@ MonoBehaviour:
   playerLap: 0
   playerPosition: 0
   playerDistanceToCheckpoint: 0
-  CPU_Vehicles:
-  - {fileID: 738679886}
+  CPU_Vehicle: {fileID: 0}
   cpuLap: 0
   cpuPos: 0
-  cpuDistance: 0
+  cpuDistanceToCheckpoint: 0
   lapTrackers:
   - {fileID: 0}
   - {fileID: 0}
@@ -7792,7 +7791,6 @@ MonoBehaviour:
   - {fileID: 0}
   newLapMarker: {fileID: 2158139958974244074}
   mode: cpu
-  frames: 0
   maxFrames: 30
 --- !u!224 &588128527
 RectTransform:
@@ -10196,6 +10194,9 @@ MonoBehaviour:
   timeStill: 0
   waypoints: []
   newLapWaypoint: {fileID: 0}
+  currentWaypointNumber: 0
+  positionOfWaypoint: {x: 0, y: 0, z: 0}
+  rotationOfWaypoint: {x: 0, y: 0, z: 0}
 --- !u!1 &749118258
 GameObject:
   m_ObjectHideFlags: 0
@@ -12789,11 +12790,10 @@ MonoBehaviour:
   playerLap: 0
   playerPosition: 0
   playerDistanceToCheckpoint: 0
-  CPU_Vehicles:
-  - {fileID: 1491068331}
+  CPU_Vehicle: {fileID: 0}
   cpuLap: 0
   cpuPos: 0
-  cpuDistance: 0
+  cpuDistanceToCheckpoint: 0
   lapTrackers:
   - {fileID: 0}
   - {fileID: 0}
@@ -12820,8 +12820,7 @@ MonoBehaviour:
   - {fileID: 0}
   newLapMarker: {fileID: 2158139958974244074}
   mode: ghost
-  frames: 0
-  maxFrames: 30
+  maxFrames: 15
 --- !u!224 &930863094
 RectTransform:
   m_ObjectHideFlags: 0
