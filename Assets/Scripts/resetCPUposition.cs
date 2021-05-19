@@ -21,24 +21,39 @@ public class resetCPUposition : MonoBehaviour
     public GameObject[] waypoints;
     public GameObject newLapWaypoint;
 
-    //
-    
-    //
+    [Header("Current Waypoint info")]
+    public int currentWaypointNumber;
+    public Vector3 positionOfWaypoint;
+    public Vector3 rotationOfWaypoint;
 
     void Start()
     {
+        //Vechicle Stuff
         cpu = this.gameObject;
         rb = cpu.GetComponent<Rigidbody>();
-        
         canGo = false;
+
+        //Waypoints
         waypoints = GameObject.FindGameObjectsWithTag("cpuWaypointCheckpoints");
         newLapWaypoint = GameObject.FindGameObjectWithTag("newLap");
 
-        setWaypointNumbers();
+        //Set current waypoint
+        currentWaypointNumber = 0;
+        positionOfWaypoint = newLapWaypoint.GetComponent<newLap>().position;
+        rotationOfWaypoint = newLapWaypoint.GetComponent<newLap>().rotation;
+
+        //Set waypoint numbers
+        int num = 1;
+        foreach (GameObject w in waypoints)
+        {
+            w.GetComponent<waypointInfo>().waypointNumber = num;
+            num++;
+        }
     }
 
     void Update()
     {
+
         speed = rb.velocity.magnitude;
         
         if (canGo)
@@ -56,6 +71,7 @@ public class resetCPUposition : MonoBehaviour
     	
     	else
     		canGo = modeSelection.canGo;
+
     }
     
     void resetPosition()
@@ -63,31 +79,24 @@ public class resetCPUposition : MonoBehaviour
     	timeStill = 0f;
     	Debug.Log("Reset CPU Position");
 
-        //Get location to go to
-        GameObject goTo = getWaypoint();
-
         //Reset the vehicle
     	rb.velocity = new Vector3(0f, 0f, 0f);
-    	transform.position = goTo.transform.position;
-    	cpu.transform.rotation = goTo.transform.rotation;
+        transform.position = positionOfWaypoint;
+        transform.eulerAngles = rotationOfWaypoint;
     }
 
-    GameObject getWaypoint()
+    public void updateWaypoint(int newWaypointNumber, Vector3 position, Vector3 rotation)
     {
-        //Find the previous checkpoint
-
-        //Defualt set to the start of the track
-        return newLapWaypoint;
-    }
-
-    void setWaypointNumbers()
-    {
-        int i = 0;
-
-        foreach (GameObject obj in waypoints)
+        if (newWaypointNumber == 0)
         {
-            obj.GetComponent<waypointInfo>().waypointNumber = i;
-            i++;
+            currentWaypointNumber = 0;
+            positionOfWaypoint = newLapWaypoint.GetComponent<newLap>().position;
+            rotationOfWaypoint = newLapWaypoint.GetComponent<newLap>().rotation;
+            return;
         }
+
+        currentWaypointNumber = newWaypointNumber;
+        positionOfWaypoint = position;
+        rotationOfWaypoint = rotation;
     }
 }
