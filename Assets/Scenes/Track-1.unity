@@ -7756,7 +7756,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   place: {fileID: 1192670001}
-  vehiclesAhead: 0
   player: {fileID: 2002668319}
   playerLap: 0
   playerPosition: 0
@@ -12785,7 +12784,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   place: {fileID: 99740828}
-  vehiclesAhead: 0
   player: {fileID: 2002668319}
   playerLap: 0
   playerPosition: 0
@@ -31233,7 +31231,7 @@ PrefabInstance:
     - target: {fileID: 2074446378218914224, guid: e85f2c864ea5940358d2d0d12d352545,
         type: 3}
       propertyPath: winSceneName
-      value: TempWinScreen
+      value: WinScreen
       objectReference: {fileID: 0}
     - target: {fileID: 2074446378218914225, guid: e85f2c864ea5940358d2d0d12d352545,
         type: 3}
